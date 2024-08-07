@@ -1,16 +1,23 @@
 <nav aria-label="Page navigation example container">
   <ul class="pagination d-flex justify-content-center">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
+
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <a class="page-link" (click)="onPreviousClick()" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
+
+    @for (page of pages; track $index) {
+    <li class="page-item" [class.active]="page === currentPage">
+      <a class="page-link" (click)="onPageClick(page)">{{ page }}</a>
+    </li>
+    }
+
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <a class="page-link" (click)="onNextClick()" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
+
   </ul>
 </nav>
