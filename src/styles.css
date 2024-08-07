@@ -1,4 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container-fluid {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container-fluid {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container-fluid {
+    width: 1170px;
+  }
+}
