@@ -5,14 +5,21 @@
     class="container flex-grow-1 d-flex justify-content-center align-items-center"
   >
     <div class="row justify-content-center mb-5">
-      @for (user of users; track $index) {
+
+      @if(isLoading){
+      <div class="d-flex justify-content-center">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+      }
+
+      @if(!isLoading){ @for (user of users; track $index) {
       <div class="col-12 col-sm-6 col-md-4 mt-5">
         <app-user-card [user]="user"></app-user-card>
       </div>
-      }
+      } }
     </div>
   </div>
-  
+
   <div class="mt-auto">
     <app-pagination
       [totalPages]="total"
