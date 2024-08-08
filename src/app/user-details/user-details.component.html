@@ -1,0 +1,37 @@
+<main class="d-flex flex-column">
+  <app-header></app-header>
+
+  <div
+    class="container flex-grow-1 d-flex justify-content-center align-items-center"
+  >
+    @if(isLoading){
+    <div class="d-flex justify-content-center">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+
+    } @if (!isLoading&& !user) {
+        <h2 class="m-5">User not found</h2>
+    }
+
+    @if (!isLoading && user) {
+    <div
+      class="row justify-content-center align-items-center align-items-md-start w-100 p-2 border-1 border-black flex-column flex-md-row"
+    >
+      <div class="user-image col-12 col-md-6 p-1">
+        <img [src]="user.avatar" alt="user avatar" class="w-100 img-fluid" />
+      </div>
+      <div
+        class="user-info col-12 col-md-6 d-flex flex-column gap-3 align-items-center mt-5 justify-content-start"
+      >
+        <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
+    }
+  </div>
+  <div class="container mt-2">
+    <button class="btn btn-lg btn-primary" type="button" (click)="goBack()">
+      Back
+    </button>
+  </div>
+</main>

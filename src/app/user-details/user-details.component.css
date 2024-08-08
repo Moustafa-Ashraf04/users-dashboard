@@ -1,0 +1,15 @@
+.user-info h2,
+.user-info p {
+  overflow-wrap: break-word; /* Ensure text wraps within its container */
+  text-align: center; /* Center align text for better readability on small screens */
+}
+
+.row {
+  border-radius: 20px;
+  background-color: #eeeeee;
+}
+
+
+.container {
+  margin-top: 100px;
+}
