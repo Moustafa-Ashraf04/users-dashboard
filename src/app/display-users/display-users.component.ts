@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+
+import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
 import { HeaderComponent } from '../header/header.component';
 import { UserCardComponent } from '../user-card/user-card.component';
 import { PaginationComponent } from '../pagination/pagination.component';
-import { GetUsersRes, User } from '../shared/user';
 import { UserService } from '../shared/user.service';
-import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
+import { GetUsersRes, User } from '../shared/user';
 
 @Component({
   selector: 'app-display-users',

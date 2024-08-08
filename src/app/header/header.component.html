@@ -3,14 +3,39 @@
     <a class="navbar-brand fw-bold" routerLink="/users">USERS</a>
 
     <div class="w-50">
-      <form class="d-flex" role="search">
+      <form class="position-relative top-0 start-0" role="search">
+        <!-- input  -->
         <input
+          #searchInput
           class="form-control form-control-lg me-2"
           type="search"
-          id="search"
+          name="search"
           placeholder="Search by ID"
           aria-label="Search"
+          (input)="onSearch(searchInput.value, searchInput)"
+          (keyup.enter)="onEnter(searchInput)"
         />
+        <!-- search result card  -->
+        @if (searchResult !== null || !searchResultFound) {
+        <div class="position-absolute top-100 w-100 z-1">
+          @if (searchResultFound && searchResult) {
+          <div class="card" (click)="navigateToDetails(searchInput)">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ searchResult!.first_name }} {{ searchResult!.last_name }}
+              </h5>
+              <p class="card-text">{{ searchResult!.email }}</p>
+            </div>
+          </div>
+          } @if (!searchResultFound && searchInput.value) {
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">User not found</p>
+            </div>
+          </div>
+          }
+        </div>
+        }
       </form>
     </div>
   </div>

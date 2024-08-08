@@ -1,7 +1,5 @@
-.user-info h2,
-.user-info p {
-  overflow-wrap: break-word; /* Ensure text wraps within its container */
-  text-align: center; /* Center align text for better readability on small screens */
+.container {
+  margin-top: 100px;
 }
 
 .row {
@@ -9,7 +7,8 @@
   background-color: #eeeeee;
 }
 
-
-.container {
-  margin-top: 100px;
+.user-info h2,
+.user-info p {
+  overflow-wrap: break-word;
+  text-align: center;
 }

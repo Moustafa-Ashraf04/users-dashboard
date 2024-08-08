@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { User } from '../shared/user';
 import { Router } from '@angular/router';
+
+import { User } from '../shared/user';
 
 @Component({
   selector: 'app-user-card',

@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { GetUsersRes, UserDetailsRes } from './user';
@@ -7,6 +7,7 @@ import { GetUsersRes, UserDetailsRes } from './user';
 @Injectable({
   providedIn: 'root',
 })
+
 export class UserService {
   private readonly apiUrl = 'https://reqres.in/api';
 
@@ -36,7 +37,7 @@ export class UserService {
 
     // check for user in local storage or else make the request
     if (cachedUser) {
-      return of(JSON.parse(cachedUser));
+      return of(JSON.parse(cachedUser) as UserDetailsRes);
     } else {
       return this.http.get<UserDetailsRes>(`${this.apiUrl}/users/${id}`).pipe(
         tap((res) => {
