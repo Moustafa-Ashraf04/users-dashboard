@@ -4,12 +4,17 @@ import { UserCardComponent } from '../user-card/user-card.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 import { GetUsersRes, User } from '../shared/user';
 import { UserService } from '../shared/user.service';
-import { LoadingSpinnerComponent } from "../shared/loading-spinner/loading-spinner.component";
+import { LoadingSpinnerComponent } from '../shared/loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'app-display-users',
   standalone: true,
-  imports: [HeaderComponent, UserCardComponent, PaginationComponent, LoadingSpinnerComponent],
+  imports: [
+    HeaderComponent,
+    UserCardComponent,
+    PaginationComponent,
+    LoadingSpinnerComponent,
+  ],
   templateUrl: './display-users.component.html',
   styleUrl: './display-users.component.css',
 })

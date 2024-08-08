@@ -15,7 +15,6 @@ import { HeaderComponent } from '../header/header.component';
 export class UserDetailsComponent implements OnInit {
   user!: User;
   isLoading: boolean = true;
-  userFound:boolean = true;
 
   constructor(
     private route: ActivatedRoute,
