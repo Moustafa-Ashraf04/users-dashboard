@@ -27,7 +27,8 @@
               <p class="card-text">{{ searchResult!.email }}</p>
             </div>
           </div>
-          } @if (!searchResultFound && searchInput.value) {
+          }
+          @if (!searchResultFound && searchInput.value) {
           <div class="card">
             <div class="card-body">
               <p class="card-text">User not found</p>

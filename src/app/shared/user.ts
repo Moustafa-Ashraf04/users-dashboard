@@ -1,4 +1,4 @@
-// users response
+// get users response
 export interface GetUsersRes {
   page: number;
   per_page: number;

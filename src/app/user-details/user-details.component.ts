@@ -9,7 +9,7 @@ import { User } from '../shared/user';
 @Component({
   selector: 'app-user-details',
   standalone: true,
-  imports: [LoadingSpinnerComponent, HeaderComponent],
+  imports: [HeaderComponent, LoadingSpinnerComponent],
   templateUrl: './user-details.component.html',
   styleUrl: './user-details.component.css',
 })

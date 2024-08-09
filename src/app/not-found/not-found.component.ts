@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { HeaderComponent } from '../header/header.component';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-not-found',
