@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { User } from '../shared/user';
+import { HoverEffectDirective } from '../shared/hover-effect.directive';
 
 @Component({
   selector: 'app-user-card',
   standalone: true,
-  imports: [],
+  imports: [HoverEffectDirective],
   templateUrl: './user-card.component.html',
   styleUrl: './user-card.component.css',
 })

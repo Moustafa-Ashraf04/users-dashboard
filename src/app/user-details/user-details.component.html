@@ -1,5 +1,4 @@
 <main class="d-flex flex-column">
-
   <app-header></app-header>
 
   <div
@@ -11,10 +10,8 @@
     </div>
 
     } @if (!isLoading&& !user) {
-        <h2 class="m-5">User not found</h2>
-    }
-
-    @if (!isLoading && user) {
+    <h2 class="m-5">User not found</h2>
+    } @if (!isLoading && user) {
     <div
       class="row justify-content-center align-items-center align-items-md-start w-100 p-2 border-1 border-black flex-column flex-md-row"
     >
@@ -25,6 +22,7 @@
         class="user-info col-12 col-md-6 d-flex flex-column gap-3 align-items-center mt-5 justify-content-start"
       >
         <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+        <p>id: {{ user.id }}</p>
         <p>{{ user.email }}</p>
       </div>
     </div>

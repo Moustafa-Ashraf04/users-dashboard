@@ -1,6 +1,7 @@
 <div
   class="card d-flex flex-row align-items-center flex-wrap justify-content-center"
   (click)="navigateToDetails()"
+  appHoverEffect
 >
   <img
     [src]="user.avatar"
@@ -11,6 +12,7 @@
     class="card-body d-flex flex-column justify-content-center align-items-center"
   >
     <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+    <p class="card-text">id: {{ user.id }}</p>
     <p class="card-text">{{ user.email }}</p>
   </div>
 </div>
